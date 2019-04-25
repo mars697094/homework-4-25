@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			html {
+				height: 100%;
+				font-size: calc(100vw/7.5);
+			}
+			
+			body {
+				height: 100%;
+				margin: 0;
+			}
+			
+			.category {
+				height: 100%;
+				width: 100%;
+				padding: 0.9rem 0 1rem;
+				box-sizing: border-box;
+				display: flex;
+			}
+			
+			.category .aside {
+				width: 85px;
+				height: 100%;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.aside ul {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			.aside ul li {
+				text-align: center;
+				line-height: 0.92rem;
+				font-size: 0.28rem;
+				border-bottom: solid 1px #aaa;
+			}
+			
+			.aside ul li a {
+				text-decoration: none;
+				color: #333;
+			}
+			
+			.main {
+				flex: 1;
+				background-color: red;
+			}
+			
+			header {
+				width: 100%;
+				height: 0.9rem;
+				position: fixed;
+				background-color: blue;
+				top: 0;
+			}
+			
+			footer {
+				width: 100%;
+				height: 1rem;
+				position: fixed;
+				background-color: blue;
+				bottom: 0;
+			}
+			
+			.transition {
+				-webkit-transition: top 0.3s linear;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header></header>
+		<div class="category">
+
+			<div class="aside">
+				<ul class="ll">
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+					<li>
+						<a href="#">热门推荐</a>
+					</li>
+					<li>
+						<a href="#">手机数码</a>
+					</li>
+				</ul>
+
+			</div>
+			<div class="main"></div>
+
+		</div>
+		<footer></footer>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var aside = document.querySelector(".aside");
+			var scroll = document.querySelector(".aside ul");
+			var limitTop = aside.offsetHeight - scroll.offsetHeight - 150;
+			var startY = 0;
+			var offsetTop = 0;
+			var clk =document.querySelectorll li")
+			var lih =clk.style.height
+			aside.ontouchstart = function(e) {
+				
+				startY = e.changedTouches[0].clientY;
+				scroll.className = "";
+			}
+			aside.ontouchmove = function(e) {
+				var y = e.changedTouches[0].clientY;
+				var tmp = offsetTop + y - startY;
+				tmp = tmp > 150 ? 150 : tmp;
+				tmp = tmp < limitTop ? limitTop : tmp;
+				scroll.style.top = tmp + 'px';
+			}
+			aside.ontouchend = function(e) {
+				var y = e.changedTouches[0].clientY;
+				var tmp = offsetTop + y - startY;
+				tmp = tmp > 0 ? 0 : tmp;
+				tmp = tmp < (limitTop + 150) ? (limitTop + 150) : tmp;
+				offsetTop = tmp;
+				scroll.style.top = offsetTop + 'px';
+				scroll.className = "transition";
+
+
+
+                
+
+				var x=scroll.style.top
+
+				index=Math.ceil(x/lih+y/lih);
+					
+			}
+			aside.ontouchcancel = function(e) {
+				console.log('触摸取消');
+			}
+			
+			
+		
