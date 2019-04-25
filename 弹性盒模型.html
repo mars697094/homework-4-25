@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			
+			html {
+				font-size: calc(100vw/7.5);
+			}
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-family: "微软雅黑";
+			}
+			body{
+
+			}
+			.search-bar {
+				width: 100%;
+				height: 0.9rem;
+				/*background-color: red;*/
+				display: flex;
+				position: fixed;
+				z-index: 999;
+			}
+			.search-bar.fixed {
+				background-color: #e43130;
+			}
+			
+			.login,
+			.main {
+				width: 1rem;
+				height: 0.9rem;
+				font-size: 0.32rem;
+				text-align: center;
+				line-height: 0.9rem;
+				color: #ffffff;
+			}
+			
+			.search {
+				flex: 1;
+				padding-top: 0.14rem;
+				box-sizing: border-box;
+			}
+			
+			.search input {
+				width: 100%;
+				height: 0.6rem;
+				border-radius: 20px;
+				border: none;
+				float: left;
+			}
+			
+			.nav {
+				font-size: 0.16rem;
+				display: block;
+				content: "";
+				clear: both;
+				margin-top: 0.4rem;
+				height: 3.2rem;
+			}
+			
+			.nav div {
+				float: left;
+				width: 20%;
+				text-align: center;
+			}
+			
+			.nav img {
+				width: 0.88rem;
+				height: 0.88rem;
+			}
+			
+			.nav span {
+				width: 100%;
+				height: 0.4rem;
+				display: block;
+				text-align: center;
+				margin-top: 0.14rem;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			.swiper-slide img{
+				width: 100%;
+			}
+			.main-products{
+				width: 100%;
+				background-color: #BFBFBF;
+			}
+			.main-products .pro{
+				float: left;
+				padding-right: 2%;
+				box-sizing: border-box;
+
+			}
+			.pro{
+				width: 50%;
+				height: 5.54rem;
+								
+			}
+			.main-products img{
+				width: 3.72rem;
+				height: 3.72rem;
+			}
+			.pro p{
+				
+				box-sizing: border-box;
+			    height: 0.65rem;
+			    font-size: 0.26rem;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 2;
+			    -webkit-box-orient: vertical;
+			    word-break: break-word;
+			    color: #232326;
+			    margin-top: 0.1rem;
+			    line-height: 0.32rem;
+			    margin-bottom: 0.06rem;
+			    padding: 0 0.08rem;
+			}
+			.other{
+				width: 100%;
+			    position: relative;
+				
+			}
+			.price{
+				width: 2rem;
+				color:#f23030;
+				font-size: 0.26rem;
+			}
+			.price span{
+				font-size: 0.32rem;
+			}
+			.btn-same{
+				width: 1rem;
+				height: 0.4rem;
+				text-align: center;
+				font-size: 0.24rem;
+				position: absolute;
+				top: 0;
+				right: 0;
+				color: #686868;
+				border: 1px solid #bfbfbf;
+    			border-radius: 4px;
+			}
+			.main-products .pro:nth-child(2n){
+				padding-right: 0;
+			}
+			.gray-text{
+				position: relative;
+			    display: -webkit-box;
+			    margin: 14px 5px;
+			    color: #848689;
+			    font-size: 14px;
+			    -webkit-box-pack: center;
+			    				background-color: #BFBFBF;
+			}
+			.gray-text:after{
+				content: "";
+			    height: 1px;
+			    width: 100%;
+			    position: absolute;
+			    top: 50%;
+			    left: 0;
+			    background-color: #cbcbcb;
+			    -webkit-transform: scaleY(.5);
+			    transform: scaleY(.5);
+			}
+			.gray-layout{
+				padding: 0 10px;
+			    background-color: #f0f2f5;
+			    z-index: 10;
+			    position: relative;
+			    display: block;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+	</head>
+
+	<body>
+		<div>
+			<div class="search-bar">
+				<div class="main">菜单</div>
+				<div class="search">
+					<input type="text" name="" id="" value="" />
+				</div>
+				<div class="login">登录</div>
+			</div>
+
+			<!-- Swiper -->
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/32632/9/4768/93254/5c808a83E3ebbcb5d/97857e74a5c92522.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/33045/29/6886/227746/5cbfbe78Ed6f1404e/e7d9fe5fbb78d012.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/31237/34/14766/642166/5cbedc69E8e8df868/4839b0ced0d4a486.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t27763/337/1729467195/110444/afed7a62/5bead1dfN1ce9dbde.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/34687/18/2586/48272/5cbd72a6E0f0df34a/6d712840c462f9ff.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/23112/33/6431/99212/5c540d7fEf8000223/fddb6b047c02ba3d.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/33036/26/6197/162047/5cbd2dfeEf0b64c08/16bca8f14de84cf7.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					<div class="swiper-slide"><img src="https://m.360buyimg.com/mobilecms/s750x366_jfs/t1/34869/14/3703/113972/5cb953c1E4294d8ea/b73c538710f5c462.jpg!cr_1125x549_0_72!q70.jpg.dpg"/></div>
+					
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<div class="nav">
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/29256/16/1420/4265/5c120d2aE83ef9fd4/ca89a8718704215c.png" /><span>京东超市</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t26635/320/1832919204/11533/a2f9878a/5bee366dN1627d554.png" /><span>海囤全球</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/17169/3/4127/4611/5c2f35cfEd87b0dd5/65c0cdc1362635fc.png" /><span>京东服饰</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/27962/13/1445/4620/5c120b24Edd8c34fe/43ea8051bc50d939.png" /><span>京东生鲜</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t16990/157/2001547525/17770/a7b93378/5ae01befN2494769f.png" /><span>京东到家</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t18454/342/2607665324/6406/273daced/5b03b74eN3541598d.png" /><span>京东超市</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t22228/270/207441984/11564/88140ab7/5b03fae3N67f78fe3.png" /><span>京东超市</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/33021/21/6849/15049/5cbef2caEc4a79b52/68a19b1919062188.png" /><span>京东超市</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t16828/63/2653634926/5662/d18f6fa1/5b03b779N5c0b196f.png" /><span>京东超市</span></div>
+				<div><img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t21481/263/412160889/15938/4246b4f8/5b0cea29N8fb2865f.png" /><span>京东超市</span></div>
+			</div>
+			
+			<div class="gray-text">
+				<span class="gray-layout">
+					<span></span>为您推荐
+				</span>
+			</div>
+			
+			
+			<div class="main-products">
+				<div class="pro">
+						<img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t29398/182/876337466/910618/3cf374b1/5c010474N64c3f454.png!q70.webp"/>
+						<p>伯乐生鲜 小龙虾 龙虾尾 清水熟冻 特级大号 500g 袋装60-70只 海鲜水产 生鲜  </p>
+						<div class="other">
+							<div class="price">￥<span>77</span>.8</div>
+							<div class="btn-same">找相似</div>
+						</div>
+				</div>
+				<div class="pro">
+						<img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/11393/29/5260/167065/5c316f0cEba0775ad/b5afa7cf3bf6a6e0.jpg!q70.dpg"/>
+						<p>伯乐生鲜 小龙虾 龙虾尾 清水熟冻 特级大号 500g 袋装60-70只 海鲜水产 生鲜  </p>
+						<div class="other">
+							<div class="price">￥<span>77</span>.8</div>
+							<div class="btn-same">找相似</div>
+						</div>
+				</div>
+				<div class="pro">
+						<img src="https://img13.360buyimg.com/mobilecms/s372x372_jfs/t1/36549/6/5549/88028/5cbff79fE06c0eff5/d4c1fce2b0424dc3.jpg!q70.dpg"/>
+						<p>伯乐生鲜 小龙虾 龙虾尾 清水熟冻 特级大号 500g 袋装60-70只 海鲜水产 生鲜  </p>
+						<div class="other">
+							<div class="price">￥<span>77</span>.8</div>
+							<div class="btn-same">找相似</div>
+						</div>
+				</div>
+				<div class="pro">
+						<img src="https://img12.360buyimg.com/mobilecms/s372x372_jfs/t24148/269/2677968209/453964/94ead7ad/5b8a36d3Nd5bc6701.jpg!q70.dpg"/>
+						<p>伯乐生鲜 小龙虾 龙虾尾 清水熟冻 特级大号 500g 袋装60-70只 海鲜水产 生鲜  </p>
+						<div class="other">
+							<div class="price">￥<span>77</span>.8</div>
+							<div class="btn-same">找相似</div>
+						</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			<div style="height: 1000px;"></div>
+		</div>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<script>
+			var searchBar = document.querySelector(".search-bar");
+	
+				var swiper = new Swiper('.swiper-container', {
+					pagination: {
+						el: '.swiper-pagination',
+					},
+				});
+	
+				window.addEventListener('scroll', function() {
+					var t = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+	
+					if(t > 50) {
+						searchBar.setAttribute("class", "search-bar fixed");
+					} else {
+						searchBar.setAttribute("class", "search-bar");
+					}
+	
+				});
+		</script>
+
+	</body>
+
+</html>
